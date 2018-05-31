@@ -1,0 +1,32 @@
+﻿*수정하고 올리는법
+git add .
+git commit -m "adding files"
+git push -u origin master
+-------------------------
+
+*받아오는 법
+git pull
+-----------------------------
+
+git pull 이후로 수정 잘못 했을 때, git pull 이후 처음 상태로 되돌리는법
+https://stackoverflow.com/questions/11614079/why-doesnt-git-pull-restore-files-ive-deleted-from-my-working-directory
+
+git checkout HEAD~1
+git reset --hard HEAD~1
+
+--------------------------
+error: Your local changes to the following files would be overwritten by merge:
+        Makefile
+에서 대처방법 
+
+1. git stash
+2. git pull
+3 git stash pop
+
+
+-----------------------------
+
+git clone (주소)
+
+
+출처: http://jybaek.tistory.com/389 [컴맹 : 진화의 시작]
