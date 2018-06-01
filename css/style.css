@@ -1,0 +1,62 @@
+/* HEADER */
+
+.navbar-brand {
+    padding-left: 100px;
+}
+
+.form-inline {
+    padding: 0 50px;
+}
+
+.form-inline .form-control {
+    width: 300px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 0 20px;
+}
+
+.navbar {
+    padding: 20px 0;
+}
+
+.bg-light {
+    background-color: #52b5e6!important;
+}
+
+.bannerImg {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.btn-outline-success {
+    color: #fef161!important;
+    border-color: #fef161!important;
+    font-weight: bold;
+}
+
+.btn-outline-success:hover {
+    background-color: #fef161 !important;
+    border-color: #fef161 !important;
+    color: #52b5e6 !important;
+}
+
+
+/* moving letters */
+
+.top-right {
+    position: absolute;
+    top: 230px;
+    right: 150px;
+    clear: both;
+    width: 500px;
+    text-align: center;
+    line-height: 200%;
+    font-size: 1.4em;
+}
+
+.top-right h1 {
+    padding-bottom: 4%;
+}
