@@ -9282,6 +9282,12 @@ a.text-dark:focus {
     }
 }
 
+
+/*mine*/
+
+
+/* banner */
+
 .bannerImg {
     padding: 0;
     display: block;
@@ -9289,19 +9295,87 @@ a.text-dark:focus {
     max-width: 100%;
 }
 
-.top-right {
-    position: absolute;
-    top: 230px;
-    right: 150px;
-    clear: both;
-    width: 500px;
+
+/* banner text */
+
+.top-right-table {
     text-align: center;
-    line-height: 200%;
-    font-size: 1.4em;
+    width: 40%;
+    height: 55%;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
 }
 
-.top-right h1 {
-    padding-bottom: 4%;
+
+/* banner button */
+
+.round {
+    position: relative;
+    border: 5px solid #52b5e6;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #52b5e6;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+}
+
+.arrow {
+    z-index: 999;
+    height: 3px;
+    margin: 0 auto;
+    width: 13px;
+    background: white;
+    transition: 0.4s ease;
+}
+
+.arrow:first-child {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 35%;
+}
+
+.arrow:nth-child(2) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 35%;
+}
+
+.arrow:nth-child(3) {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 54%;
+}
+
+.arrow:nth-child(4) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 54%;
+}
+
+.round:hover span:nth-child(1) {
+    transform: rotate(-135deg);
+}
+
+.round:hover span:nth-child(2) {
+    transform: rotate(135deg);
+}
+
+.round:hover span:nth-child(3) {
+    transform: rotate(225deg);
+}
+
+.round:hover span:nth-child(4) {
+    transform: rotate(-225deg);
 }
 
 .aboutUsText,
@@ -9316,46 +9390,8 @@ a.text-dark:focus {
     background-color: #fef161;
 }
 
-.btn-learn {
-    display: inline-block;
-    border-radius: 20px;
-    background-color: #fef161;
-    border: none;
-    color: rgb(66, 66, 66);
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
-    padding: 10px;
-    width: 230px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-}
 
-.btn-learn span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.btn-learn span:after {
-    content: '\21D3';
-    position: relative;
-    opacity: 0;
-    top: 0;
-    bottom: -30px;
-    transition: 0.5s;
-}
-
-.btn-learn:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-.btn-learn:hover {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
+/* tutorial boxes*/
 
 .column {
     float: left;
@@ -9363,67 +9399,98 @@ a.text-dark:focus {
     height: 30%;
     margin: 0 auto;
     margin-top: 3%;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
-.go {
+.lessonEx {
     position: absolute;
-    top: 853px;
-    height: 58px;
-    padding: 0.8em;
-    color: rgba(0, 0, 0);
-    line-height: 1.4;
-    background: #ffc107;
-    opacity: 0.8;
-    width: 100px;
-    text-align: center;
-    font-size: 17px;
-    font-weight: bold;
-    transition: width 1s, height 1s, padding-top 1s;
-    border-color: #004d68;
-    border-style: none solid solid none;
+    bottom: 0;
+    left: 0;
+    padding: 4%;
+    font-size: 15px;
+    opacity: 1;
+    transition: .5s ease;
+    margin: 2%;
 }
 
-.column:hover .go {
+.column:hover .lessonEx {
+    opacity: 0;
+}
+
+.column img {
     display: block;
-    width: 327px;
-    height: 327px;
+    transition: transform 10s;
+}
+
+.column:hover img {
+    opacity: 1;
+    filter: brightness(80%);
+    transform: scale(1.2);
+    transform-origin: 50% 50%;
+}
+
+.column:hover .lessonBtn {
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.lessonBtn {
+    border-radius: 4px;
+    background-color: #ffc107;
+    border: none;
+    color: #FFFFFF;
     text-align: center;
-    padding-top: 10%;
+    font-size: 120%;
+    padding: 2% 1%;
+    width: 40%;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: .5s ease;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+}
+
+.lessonBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.lessonBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.lessonBtn:hover span {
+    padding-right: 25px;
+}
+
+.lessonBtn:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .column:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.learnMr:link {
-    color: rgb(66, 66, 66)!important;
-    text-decoration: none!important;
-}
 
-.learnMr:visited {
-    color: rgb(66, 66, 66)!important;
-    text-decoration: none!important;
-}
-
-.learnMr:hover {
-    color: rgb(66, 66, 66)!important;
-    text-decoration: none!important;
-}
-
-.lessonLink:link {
-    text-decoration: none;
-    color: black;
-}
-
-.lessonLink:visited {
-    text-decoration: none;
-    color: black;
-}
-
-.lessonLink:hover {
-    text-decoration: none;
-    color: black;
-}
+/*about us*/
 
 .aboutUsP {
     padding: 3% 8%;
@@ -9447,68 +9514,102 @@ a.text-dark:focus {
     border: 6px solid #52b5e6;
 }
 
-.spin.thick {
-    margin: 3% 4%;
-    background: none;
-    border: 0;
-    box-sizing: border-box;
-    padding: 1em 2em;
-    box-shadow: inset 0 0 0 5px #0eb7da;
-    color: #0eb7da;
-    font-size: inherit;
+svg {
+    width: 15%;
+    margin: 0 4%;
+}
+
+
+/*footer*/
+
+
+/* Footer */
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#footer {
+    background: #003F70 !important;
+}
+
+#footer h5 {
+    padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+#footer ul.social li {
+    padding: 3px 0;
+}
+
+#footer ul.social li a i {
+    margin-right: 5px;
+    font-size: 25px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+
+#footer ul.social li:hover a i {
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+#footer ul.social li a,
+#footer ul.quick-links li a {
+    color: #ffffff;
+}
+
+#footer ul.social li a:hover {
+    color: #eeeeee;
+}
+
+#footer ul.quick-links li {
+    padding: 3px 0;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+
+#footer ul.quick-links li:hover {
+    padding: 3px 0;
+    margin-left: 5px;
     font-weight: 700;
-    position: relative;
-    vertical-align: middle;
 }
 
-.spin.thick::before,
-.spin.thick::after {
-    box-sizing: inherit;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+#footer ul.quick-links li a i {
+    margin-right: 5px;
 }
 
-.spin {
-    width: 13em;
-    height: 13em;
-    padding: 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
 }
 
-.spin:hover {
-    color: #004d68;
-}
-
-.spin::before,
-.spin::after {
-    top: 0;
-    left: 0;
-}
-
-.spin::before {
-    border: 10px solid transparent;
-}
-
-.spin:hover::before {
-    border-top-color: #004d68;
-    border-right-color: #004d68;
-    border-bottom-color: #004d68;
-    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
-}
-
-.spin::after {
-    border: 0 solid transparent;
-}
-
-.spin:hover::after {
-    border-top: 10px solid #004d68;
-    border-left-width: 10px;
-    border-right-width: 10px;
-    transform: rotate(270deg);
-    transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+@media (max-width:767px) {
+    #footer h5 {
+        padding-left: 0;
+        border-left: transparent;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
 }
 
 

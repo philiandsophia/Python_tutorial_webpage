@@ -9,34 +9,11 @@
     <!-- Bootstrap CSS -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Add smooth scrolling to all links
-            $("a").on('click', function(event) {
-
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function() {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="./js/bootstrap.min.js " integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T " crossorigin="anonymous "></script>
+    <script src="./js/ajax.js"></script>
 
     <title>Python World</title>
 </head>
@@ -89,32 +66,57 @@
         </div>
     </nav>
 
-    <div id="banner ">
+    <div id="banner">
         <img class="bannerImg " src="img/coding2.jpg " alt="coding ">
+        <table class="top-right-table">
+            <tr class="top-right-tr">
+                <td class="top-right-td">
+                    <h1>Python World</h1>
+                </td>
+            </tr>
+
+            <tr class="top-right-tr">
+                <td class="top-right-td">
+                    <p style="line-height: 200%; font-size: 18px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
+                </td>
+            </tr>
+
+            <tr class="top-right-tr">
+                <td class="top-right-td">
+                    <div class="round">
+                        <a href="#tutorials">
+                            <span class="arrow"></span>
+                            <span class="arrow"></span>
+                            <span class="arrow"></span>
+                            <span class="arrow"></span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
 
-    <div class="top-right ">
-        <h1>Python World</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button class="btn-learn" style="vertical-align:middle"><span><a class="learnMr" href=#tutorials>Learn More </a></span></button>
-    </div>
+
+
 
     <div id="tutorials" class="container">
         <h1>Lessons</h1>
 
-
         <div class="row">
+
             <div class="column">
-                <img class="lessonImg" src="img/lesson.png" alt="Fjords" style="width:100%">
-                <h3 class="go"><a class='lessonLink' href='#'>01 Basic</a></h3>
+                <img src="img/lesson.png" alt="Fjords" style="width:100%; height: 50%;">
+                <div class="lessonEx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</div>
+                <button class="lessonBtn"><span>01 Basic </span></button>
+            </div>
+
+            <div class="column">
+                <img src="img/lesson.png" alt="Fjords" style="width:100%">
+                <button class="lessonBtn"><span>01 Basic </span></button>
             </div>
             <div class="column">
-                <img class="lessonImg" src="img/lesson.png" alt="Fjords" style="width:100%">
-                <h3 class="go"><a class='lessonLink' href='#'>02 List</a></h3>
-            </div>
-            <div class="column">
-                <img class="lessonImg" src="img/lesson.png" alt="Fjords" style="width:100%">
-                <h3 class="go"><a class='lessonLink' href='#'>03 Array</a></h3>
+                <img src="img/lesson.png" alt="Fjords" style="width:100%">
+                <button class="lessonBtn"><span>01 Basic </span></button>
             </div>
         </div>
 
@@ -123,15 +125,15 @@
         <div class="row">
             <div class="column">
                 <img src="img/lesson.png" alt="Fjords" style="width:100%">
-                <button type="button" class="btn btn-warning">Go!</button>
+                <button class="lessonBtn"><span>01 Basic </span></button>
             </div>
             <div class="column">
-                <img src="img/lesson.png" alt="Forest" style="width:100%">
-                <button type="button" class="btn btn-warning">Go!</button>
+                <img src="img/lesson.png" alt="Fjords" style="width:100%">
+                <button class="lessonBtn"><span>01 Basic </span></button>
             </div>
             <div class="column">
-                <img src="img/lesson.png" alt="Mountains" style="width:100%">
-                <button type="button" class="btn btn-warning">Go!</button>
+                <img src="img/lesson.png" alt="Fjords" style="width:100%">
+                <button class="lessonBtn"><span>01 Basic </span></button>
             </div>
         </div>
 
@@ -140,11 +142,39 @@
 
 
 
+
+
+
+
     <div id="aboutUs" class="aboutUsText">
         <h2>Python World</h2>
-        <button class="spin thick"><img src="img/icon.png" alt="Forest" style="width:100%">Basic</button>
-        <button class="spin thick"><img src="img/icon.png" alt="Forest" style="width:100%">Fun</button>
-        <button class="spin thick"><img src="img/icon.png" alt="Forest" style="width:100%">Challenging</button>
+        <svg id="svg" viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#FDB900"/>
+                <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#fff"
+                      stroke-dasharray="1,250.2"
+                      d="M50 10
+                         a 40 40 0 0 1 0 80
+                         a 40 40 0 0 1 0 -80"/>
+                <text x="50" y="50" text-anchor="middle" dy="7" font-size="13">Learn Theory</text>
+              </svg>
+        <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#FDB900"/>
+                <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#fff"
+                      stroke-dasharray="125.6,125.6"
+                      d="M50 10
+                         a 40 40 0 0 1 0 80
+                         a 40 40 0 0 1 0 -80"/>
+                <text x="50" y="50" text-anchor="middle" dy="7" font-size="13">Slove</text>
+              </svg>
+        <svg viewbox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="#FDB900"/>
+                <path fill="none" stroke-linecap="round" stroke-width="5" stroke="#fff"
+                      stroke-dasharray="251.2,0"
+                      d="M50 10
+                         a 40 40 0 0 1 0 80
+                         a 40 40 0 0 1 0 -80"/>
+                <text x="50" y="50" text-anchor="middle" dy="7" font-size="13">100%</text>
+              </svg>
 
         <p class="aboutUsP">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
@@ -154,11 +184,63 @@
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
-    <script src="js/bootstrap.min.js " integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T " crossorigin="anonymous "></script>
 </body>
+
+<!-- Footer -->
+<section id="footer">
+    <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                    <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                <ul class="list-unstyled list-inline social text-center">
+                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+            </hr>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                <p>National Transaction Corporation is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+                <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+            </div>
+            </hr>
+        </div>
+    </div>
+</section>
 
 </html>
