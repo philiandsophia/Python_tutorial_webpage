@@ -2506,14 +2506,19 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: #52b5e6;
+    border-color: #52b5e6;
+    width: 20%;
+    padding: 1% 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    background-color: #52b5e6;
+    border-color: #52b5e6;
 }
 
 .btn-primary:focus,
@@ -5667,6 +5672,8 @@ button.close {
 .modal-title {
     margin-bottom: 0;
     line-height: 1.5;
+    position: absolute;
+    float: left;
 }
 
 .modal-body {
@@ -9382,7 +9389,7 @@ a.text-dark:focus {
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 3%;
+    padding: 8% 3%;
     text-align: center;
 }
 
@@ -9444,9 +9451,9 @@ a.text-dark:focus {
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 120%;
+    font-size: 110%;
     padding: 2% 1%;
-    width: 40%;
+    width: 50%;
     transition: all 0.5s;
     cursor: pointer;
     display: block;
@@ -9465,6 +9472,12 @@ a.text-dark:focus {
     display: inline-block;
     position: relative;
     transition: 0.5s;
+    letter-spacing: 1px;
+}
+
+.lessonBtn a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .lessonBtn span:after {
@@ -9522,94 +9535,61 @@ svg {
 
 /*footer*/
 
-
-/* Footer */
-
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-section {
-    padding: 60px 0;
+footer {
+    background-color: #003F70;
 }
 
-section .section-title {
-    text-align: center;
-    color: #007b5e;
-    margin-bottom: 50px;
-    text-transform: uppercase;
+footer ul li {
+    padding: 5px 0px;
 }
 
-#footer {
-    background: #003F70 !important;
+
+/*contact us modal*/
+
+#message-text {
+    height: 200px;
 }
 
-#footer h5 {
-    padding-left: 10px;
-    border-left: 3px solid #eeeeee;
-    padding-bottom: 6px;
+.col-md-4 {
+    text-align: left;
+}
+
+.contact span,
+.lessons span,
+.social span {
+    color: #FFF;
+    font-weight: 800;
+    padding-bottom: 10px;
     margin-bottom: 20px;
-    color: #ffffff;
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
 }
 
-#footer a {
-    color: #ffffff;
-    text-decoration: none !important;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
+.contact li a,
+.contact li p,
+.lessons li a,
+.social li a {
+    color: #FFF;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-#footer ul.social li {
-    padding: 3px 0;
+.contact li p {
+    margin: 0 auto;
+    font-weight: bold;
 }
 
-#footer ul.social li a i {
-    margin-right: 5px;
-    font-size: 25px;
-    -webkit-transition: .5s all ease;
-    -moz-transition: .5s all ease;
-    transition: .5s all ease;
+.contact li:nth-child(5) {
+    margin-top: 5%;
 }
 
-#footer ul.social li:hover a i {
-    font-size: 30px;
-    margin-top: -10px;
-}
-
-#footer ul.social li a,
-#footer ul.quick-links li a {
-    color: #ffffff;
-}
-
-#footer ul.social li a:hover {
-    color: #eeeeee;
-}
-
-#footer ul.quick-links li {
-    padding: 3px 0;
-    -webkit-transition: .5s all ease;
-    -moz-transition: .5s all ease;
-    transition: .5s all ease;
-}
-
-#footer ul.quick-links li:hover {
-    padding: 3px 0;
-    margin-left: 5px;
-    font-weight: 700;
-}
-
-#footer ul.quick-links li a i {
-    margin-right: 5px;
-}
-
-#footer ul.quick-links li:hover a i {
-    font-weight: 700;
-}
-
-@media (max-width:767px) {
-    #footer h5 {
-        padding-left: 0;
-        border-left: transparent;
-        padding-bottom: 0px;
-        margin-bottom: 10px;
-    }
+.contact,
+.lessons,
+.social {
+    list-style: none;
 }
 
 
